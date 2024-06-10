@@ -33,7 +33,6 @@
 			background-size: contain;
 			background-position: center;
 			background-repeat: no-repeat;
-			background-image: url("");
 			visibility: visible;
 			z-index: 10;
 		}
@@ -58,20 +57,9 @@
 	</div>
 
 	<script>
-		const urlParams = new URLSearchParams(window.location.search);
-		var swfName = urlParams.get('swf');
-		if (!swfName) {
-			swfName = 'default.swf';
-		}
-		var imageName = urlParams.get('img');
-		if (!imageName) {
-			imageName = 'todo.svg';
-		}
-		
 		const config = {
 			width: 550,
 			height: 400,
-			splash: imageName,
 		    "progress": {
 		        "direction": "lr",
 		        "back": "#000000",
@@ -80,7 +68,7 @@
 			baseUrl: 'dist',
 			runtime: ['dist/runtime.js'],
 			binary: [{
-				path: swfName,
+				path: './create_projector.swf',
 				resourceType: 'GAME',
 				name: 'Game', // not used atm
 				meta: {} // not used atm
