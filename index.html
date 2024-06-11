@@ -1,4 +1,4 @@
-        <div id='ruffle' style="text-align: center;"></div>
+        <center><div id='ruffle' style="text-align: center; box-shadow: 0 0 10px #000; width: 670px;"></div></center>
 
         <script src='https://unpkg.com/@ruffle-rs/ruffle/ruffle.js'></script>
 
@@ -16,7 +16,7 @@ swfobject.embedSWF = function(url, cont, width, height){
 
             height: height,
 
-            style: 'width: ' + width + '%; height: ' + height + 'px',
+            style: 'width: ' + width + 'px; height: ' + height + 'px',
 
         });
 
@@ -54,7 +54,7 @@ swfobject.embedSWF = function(url, cont, width, height){
 
     "menu": false,
 
-    "salign": "",
+    "salign": "left",
 
     "scale": "showAll",
 
@@ -72,6 +72,6 @@ swfobject.embedSWF = function(url, cont, width, height){
 
 }
 
-swfobject.embedSWF('./create_projector.swf', 'ruffle', 100, 400);
+swfobject.embedSWF('./create_projector.swf', 'ruffle', 670, 400);
 
         </script>
